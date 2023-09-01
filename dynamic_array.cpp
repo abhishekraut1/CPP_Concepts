@@ -29,5 +29,6 @@ int main() {
     while(true) {
         int* ptr = new int;
     }
+    delete[] arr;
 return 0;
 }
