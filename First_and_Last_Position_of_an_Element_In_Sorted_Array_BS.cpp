@@ -3,9 +3,9 @@ using namespace std;
 int firstOccurence(int arr[],int size,int key){
     int start = 0;
     int end = size -1;
-    int mid = start + (end-start)/2;
     int ans = -1;
     while(start<=end){
+        int mid = start + (end-start)/2;
         if(key==arr[mid]){
             ans = mid;
             end = mid-1; //going to left side
@@ -15,7 +15,6 @@ int firstOccurence(int arr[],int size,int key){
         }else if(key>arr[mid]){
             start = mid+1;
         }
-        mid = start + (end-start)/2;
     }
 return ans;    
 }
@@ -23,9 +22,9 @@ return ans;
 int lastOccurence(int arr[],int size,int key){
     int start = 0;
     int end = size -1;
-    int mid = start + (end-start)/2;
     int ans = -1;
     while(start<=end){
+        int mid = start + (end-start)/2;
         if(key==arr[mid]){
             ans = mid;
             start = mid+1; //going to right side
@@ -35,7 +34,6 @@ int lastOccurence(int arr[],int size,int key){
         }else if(key>arr[mid]){
             start = mid+1;
         }
-        mid = start + (end-start)/2;
     }
 return ans;    
 }
